@@ -22,7 +22,7 @@
  - A new internship instance should start with a copy of the internship categories 
 '''
 
-from typing import Optional, Any, Dict
+from typing import Optional, Any, Dict, Tuple
 from sqlmodel import Field, SQLModel, create_engine, Session
 
 import requests as r
@@ -49,7 +49,7 @@ class Student(SQLModel, table=True):
     phone: Optional[str]
 
 
-def insert_into_student(vars: Dict[str, Any]):
+def insert_into(table: SQLModel, tuple: Tuple):
     pass
 
 
