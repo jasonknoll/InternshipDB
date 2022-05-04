@@ -63,6 +63,7 @@ def create_db_and_tables():
 def query_menu():
     pass
 
+
 def db_menu():
     print('Database ==============')
     print('1. Query database')
