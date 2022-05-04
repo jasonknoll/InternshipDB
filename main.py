@@ -60,6 +60,10 @@ def create_db_and_tables():
 # ------------------------------------------
 
 
+def add_database_entry():
+    pass
+
+
 def query_menu():
     pass
 
@@ -69,7 +73,12 @@ def db_menu():
     print('1. Query database')
     print('2. Add database entry')
 
-    selection = input(> )
+    selection = input('> ')
+
+    if selection == "1":
+        query_menu()
+    elif selection == "2":
+        add_database_entry()
 
 
 def login_menu():
