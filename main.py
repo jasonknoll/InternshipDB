@@ -26,8 +26,23 @@ import requests as r
 import logging
 
 
+def student_registration_menu():
+    print('Student Registration ============')
+    print('')
+
+
+def main_menu(logged_in: bool):
+    if logged_in == False:
+        print("FGCU Student Internship DB =================")
+        print("1. Student registration")
+        print("2. Student login (not real)")
+    else:
+        pass
+
+
 def main():
     pass
+
     '''
     # idk try to get some response
     response = r.get('http://127.0.0.1:8000/3')
