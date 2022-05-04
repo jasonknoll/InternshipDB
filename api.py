@@ -1,6 +1,6 @@
 '''
- main.py - FGCU Data Engineering Internship DB Project
- Main file that houses all code and logic for our 
+ api.py - FGCU Data Engineering Internship DB Project
+ API file that houses all code and logic for our 
  CRUD group final project for COP 3710. 
 
  Jason Knoll, Jordan Tatum, Chance Mullen
