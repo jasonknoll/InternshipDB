@@ -44,3 +44,6 @@ CREATE TABLE Duties (
         PRIMARY KEY (Internship_ID),
         FOREIGN KEY (Internship_ID) REFERENCES Internship(Internship_ID)
 );
+
+INSERT INTO Student ("name", "email")
+VALUES ("Jason Knoll", "jmknoll4456@eagle.fgcu.edu")

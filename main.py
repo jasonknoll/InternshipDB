@@ -29,6 +29,7 @@ import requests as r
 import logging
 
 
+# Setup DB file to be read
 sql_db_file = 'intern.db'
 sqlite_url = f'sqlite:///{sql_db_file}'
 
@@ -37,8 +38,10 @@ engine = create_engine(sqlite_url, echo=True)
 # DB Models
 # ------------------------------------------
 
-# Create our student table
+
 class Student(SQLModel, table=True):
+    '''Create our student table'''
+
     student_id: Optional[int] = Field(default=None, primary_key=True)
     name: str
     email: str
@@ -66,7 +69,9 @@ class Duties(SQLModel, table=True):
     pass
 '''
 
-# 
+#
+
+
 def insert_into_student(vars: Dict[str, Any]):
     pass
 
@@ -76,12 +81,17 @@ def create_db_and_tables():
 
 # Interfacing
 # ------------------------------------------
+
+
 def query_menu():
-    pass
+    print('Database ==============')
+    print('1. Query database')
+    print('2. Add database entry')
 
 
 def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
+    
     print('Login =============')
     id = int(input('Enter your ID number: '))
     # check to see if they exist
@@ -121,12 +131,16 @@ def student_registration_menu():
     # Commit the changes and store in DB
     sesh.commit()
 
+    # Move onto the query menu
+    query_menu()
+
 
 def main_menu(logged_in: bool):
     if logged_in == False:
         print("FGCU Student Internship DB =================")
         print("1. Student registration")
-        print("2. Login (not real)")
+        print("2. Student login (not actually)")
+        print("3. Company registration")
 
         user = input()
         if user == "1":
