@@ -22,17 +22,59 @@
  - A new internship instance should start with a copy of the internship categories 
 '''
 
+from typing import Optional
+from sqlmodel import Field, SQLModel
+
 import requests as r
 import logging
 
+# DB Models
+# ------------------------------------------
+
+# Create our student table
+class Student(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    name: str
+    email: str
+    address: Optional[str]
+    phone: Optional[str]
+
+
+# Officer Table
+class Officer(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, foreign_key="student.id")
+
+
+class Company(SQLModel, table=True):
+    id: Optional[int] = Field(default=None)
+
+
+class Internship(SQLModel, table=True):
+    id: Optional[int] = Field(default=None)
+
+
+class Duties(SQLModel, table=True):
+    id: Optional[int] = Field(default=None)
+
+
+
+# Interfacing
+# ------------------------------------------
+def query_menu():
+    pass
+
 
 def login_menu():
+    '''Student enters their ID. The DB is queried to see if their ID is already registered'''
     print('Login =============')
     id = int(input('Enter your ID number: '))
 
+
 def student_registration_menu():
+    '''Student enters their information and is added to the DB'''
+
     print('Student Registration ============')
-    print('')
+    name = input('Enter your name: ')
 
 
 def main_menu(logged_in: bool):
@@ -47,11 +89,11 @@ def main_menu(logged_in: bool):
         elif user == "2":
             login_menu()
     else:
-        pass
+        query_menu()
 
 
 def main():
-    pass
+    main_menu(False)
 
     '''
     # idk try to get some response
