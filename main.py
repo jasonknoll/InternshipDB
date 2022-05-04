@@ -23,21 +23,28 @@
 '''
 
 from typing import Optional
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field, SQLModel, create_engine
 
 import requests as r
 import logging
+
+
+sql_db_file = 'intern.db'
+sqlite_url = f'sqlite:///{sql_db_file}'
+
+engine = create_engine(sqlite_url, echo=True)
 
 # DB Models
 # ------------------------------------------
 
 # Create our student table
 class Student(SQLModel, table=True):
-    student_id: Optional[int] = Field(default=None, primary_key=True, auto_increment=True)
+    student_id: Optional[int] = Field(default=None, primary_key=True)
     name: str
     email: str
     address: Optional[str]
     phone: Optional[str]
+
 
 '''
 # Officer Table
@@ -73,9 +80,10 @@ def login_menu():
     # check to see if they exist
 
 
-def get_name(): 
+def get_name():
     name = input('Enter your name: ')
     return name
+
 
 def student_registration_menu():
     '''Student enters their information and is added to the DB'''
@@ -84,7 +92,7 @@ def student_registration_menu():
 
     name = ""
 
-    while(name == ""): 
+    while(name == ""):
         name = get_name()
         if name == "":
             logging.warning("Name must not be empty")
@@ -95,9 +103,9 @@ def student_registration_menu():
         if email == "":
             logging.warning("Email must not be empty")
 
-    address = input('Enter your address or press enter to leave blank: ') 
+    address = input('Enter your address or press enter to leave blank: ')
 
-    phone = input('Enter your address or press enter to leave blank: ') 
+    phone = input('Enter your address or press enter to leave blank: ')
 
 
 def main_menu(logged_in: bool):
