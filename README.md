@@ -14,10 +14,7 @@ _Python 3.9.12 was used for this project_
 To install all the required Python packages: 
 `pip install -r reqs.txt`
 
-In one console window run:
-`python -m uvicorn api:app -reload`
-
-And in another open the interface with:
+To run in your console, use:
 `python main.py`
 
 ## How to Use
