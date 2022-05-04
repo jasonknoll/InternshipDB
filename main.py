@@ -33,7 +33,7 @@ import logging
 sql_db_file = 'intern.db'
 sqlite_url = f'sqlite:///{sql_db_file}'
 
-engine = create_engine(sqlite_url, echo=True)
+engine = create_engine(sqlite_url, echo=False)
 
 # DB Models
 # ------------------------------------------
@@ -69,13 +69,15 @@ def db_menu():
     print('1. Query database')
     print('2. Add database entry')
 
+    selection = input(> )
+
 
 def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
 
     print('Login =============')
     id = int(input('Enter your ID number: '))
-    # check to see if they exist
+    # TODO check to see if they exist
 
 
 def student_registration_menu():
@@ -123,7 +125,7 @@ def main_menu(logged_in: bool):
         print("2. Student login (not actually)")
         print("3. Company registration")
 
-        user = input()
+        user = input('> ')
         if user == "1":
             student_registration_menu()
         elif user == "2":
