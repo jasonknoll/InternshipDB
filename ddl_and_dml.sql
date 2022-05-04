@@ -48,4 +48,4 @@ CREATE TABLE Duties (
 
 /* DML Examples */
 INSERT INTO Student ("name", "email")
-VALUES ("Jason Knoll", "jmknoll4456@eagle.fgcu.edu")
+VALUES ("Jason Knoll", "jmknoll@school.edu")
