@@ -60,7 +60,7 @@ def create_db_and_tables():
 # ------------------------------------------
 
 
-def add_database_entry():
+def add_database_entry_menu():
     pass
 
 
@@ -78,7 +78,7 @@ def db_menu():
     if selection == "1":
         query_menu()
     elif selection == "2":
-        add_database_entry()
+        add_database_entry_menu()
 
 
 def login_menu():
