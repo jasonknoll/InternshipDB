@@ -30,10 +30,10 @@ import logging
 
 # DB Models
 # ------------------------------------------
-
+'''
 # Create our student table
 class Student(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
+    student_id: Optional[int] = Field(default=None, primary_key=True)
     name: str
     email: str
     address: Optional[str]
@@ -42,20 +42,22 @@ class Student(SQLModel, table=True):
 
 # Officer Table
 class Officer(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, foreign_key="student.id")
+    officet_id: Optional[int] = Field(default=None, foreign_key="student.id")
+    club_title: str
+    name: str = Field(foreign_key="student.name")
 
 
 class Company(SQLModel, table=True):
-    id: Optional[int] = Field(default=None)
+    pass
 
 
 class Internship(SQLModel, table=True):
-    id: Optional[int] = Field(default=None)
+    pass
 
 
 class Duties(SQLModel, table=True):
-    id: Optional[int] = Field(default=None)
-
+    pass
+'''
 
 
 # Interfacing
@@ -68,13 +70,30 @@ def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
     print('Login =============')
     id = int(input('Enter your ID number: '))
+    # check to see if they exist
 
+
+def get_name(): 
+    name = input('Enter your name: ')
+    return name
 
 def student_registration_menu():
     '''Student enters their information and is added to the DB'''
 
     print('Student Registration ============')
-    name = input('Enter your name: ')
+
+    name = ""
+
+    while(name == ""): 
+        name = get_name()
+        if name == "":
+            logging.warning("Name must not be empty")
+
+    email = ""
+    while(email == ""):
+        email = input('Enter your email address: ')
+        if email == "":
+            logging.warning("Email must not be empty")
 
 
 def main_menu(logged_in: bool):
