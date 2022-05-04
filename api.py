@@ -22,6 +22,7 @@
 
 from fastapi import FastAPI
 import sqlite3 as sql
+import logging
 
 
 # FastAPI object
@@ -34,6 +35,11 @@ con = sql.connect("intern.db")
 @app.get('/')
 def root():
     return({"text": "Hello world"})
+
+# testing dynamic URL
+@app.get('/{num}')
+def new_json(num: int):
+    return({"number" : num})
 
 
 def create():
