@@ -49,29 +49,6 @@ class Student(SQLModel, table=True):
     phone: Optional[str]
 
 
-'''
-# Officer Table
-class Officer(SQLModel, table=True):
-    officet_id: Optional[int] = Field(default=None, foreign_key="student.id")
-    club_title: str
-    name: str = Field(foreign_key="student.name")
-
-
-class Company(SQLModel, table=True):
-    pass
-
-
-class Internship(SQLModel, table=True):
-    pass
-
-
-class Duties(SQLModel, table=True):
-    pass
-'''
-
-#
-
-
 def insert_into_student(vars: Dict[str, Any]):
     pass
 
@@ -84,6 +61,9 @@ def create_db_and_tables():
 
 
 def query_menu():
+    pass
+
+def db_menu():
     print('Database ==============')
     print('1. Query database')
     print('2. Add database entry')
@@ -91,7 +71,7 @@ def query_menu():
 
 def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
-    
+
     print('Login =============')
     id = int(input('Enter your ID number: '))
     # check to see if they exist
@@ -132,7 +112,7 @@ def student_registration_menu():
     sesh.commit()
 
     # Move onto the query menu
-    query_menu()
+    db_menu()
 
 
 def main_menu(logged_in: bool):

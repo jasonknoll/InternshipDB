@@ -45,5 +45,7 @@ CREATE TABLE Duties (
         FOREIGN KEY (Internship_ID) REFERENCES Internship(Internship_ID)
 );
 
+
+/* DML Examples */
 INSERT INTO Student ("name", "email")
 VALUES ("Jason Knoll", "jmknoll4456@eagle.fgcu.edu")
