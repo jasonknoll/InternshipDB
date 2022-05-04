@@ -30,16 +30,16 @@ import logging
 
 # DB Models
 # ------------------------------------------
-'''
+
 # Create our student table
 class Student(SQLModel, table=True):
-    student_id: Optional[int] = Field(default=None, primary_key=True)
+    student_id: Optional[int] = Field(default=None, primary_key=True, auto_increment=True)
     name: str
     email: str
     address: Optional[str]
     phone: Optional[str]
 
-
+'''
 # Officer Table
 class Officer(SQLModel, table=True):
     officet_id: Optional[int] = Field(default=None, foreign_key="student.id")
@@ -94,6 +94,10 @@ def student_registration_menu():
         email = input('Enter your email address: ')
         if email == "":
             logging.warning("Email must not be empty")
+
+    address = input('Enter your address or press enter to leave blank: ') 
+
+    phone = input('Enter your address or press enter to leave blank: ') 
 
 
 def main_menu(logged_in: bool):
