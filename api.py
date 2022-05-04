@@ -37,9 +37,11 @@ def root():
     return({"text": "Hello world"})
 
 # testing dynamic URL
+
+
 @app.get('/{num}')
 def new_json(num: int):
-    return({"number" : num})
+    return({"number": num})
 
 
 def create():

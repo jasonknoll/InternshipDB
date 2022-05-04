@@ -1,4 +1,7 @@
 '''
+ **PLEASE READ THE README FILE FIRST**
+
+
  main.py - FGCU Data Engineering Internship DB Project
  Main file that houses the interface for our DB project.
  *WE ONLY HAVE A TEXT INTERFACE*
@@ -17,7 +20,6 @@ def main():
     response = r.get('http://127.0.0.1:8000/3')
     print(response.json())
     '''
-
 
 
 if __name__ == '__main__':
