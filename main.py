@@ -26,6 +26,10 @@ import requests as r
 import logging
 
 
+def login_menu():
+    print('Login =============')
+    id = int(input('Enter your ID number: '))
+
 def student_registration_menu():
     print('Student Registration ============')
     print('')
@@ -35,7 +39,13 @@ def main_menu(logged_in: bool):
     if logged_in == False:
         print("FGCU Student Internship DB =================")
         print("1. Student registration")
-        print("2. Student login (not real)")
+        print("2. Login (not real)")
+
+        user = input()
+        if user == "1":
+            student_registration_menu()
+        elif user == "2":
+            login_menu()
     else:
         pass
 
