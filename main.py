@@ -22,8 +22,8 @@
  - A new internship instance should start with a copy of the internship categories 
 '''
 
-from typing import Optional
-from sqlmodel import Field, SQLModel, create_engine
+from typing import Optional, Any, Dict
+from sqlmodel import Field, SQLModel, create_engine, Session
 
 import requests as r
 import logging
@@ -66,6 +66,13 @@ class Duties(SQLModel, table=True):
     pass
 '''
 
+# 
+def insert_into_student(vars: Dict[str, Any]):
+    pass
+
+
+def create_db_and_tables():
+    SQLModel.metadata.create_all(engine)
 
 # Interfacing
 # ------------------------------------------
@@ -80,11 +87,6 @@ def login_menu():
     # check to see if they exist
 
 
-def get_name():
-    name = input('Enter your name: ')
-    return name
-
-
 def student_registration_menu():
     '''Student enters their information and is added to the DB'''
 
@@ -93,19 +95,31 @@ def student_registration_menu():
     name = ""
 
     while(name == ""):
-        name = get_name()
+        name = input('Enter your name: ')
         if name == "":
-            logging.warning("Name must not be empty")
+            logging.warning("Name must not be empty!")
 
     email = ""
     while(email == ""):
         email = input('Enter your email address: ')
         if email == "":
-            logging.warning("Email must not be empty")
+            logging.warning("Email must not be empty!")
 
     address = input('Enter your address or press enter to leave blank: ')
 
-    phone = input('Enter your address or press enter to leave blank: ')
+    phone = input('Enter your phone number or press enter to leave blank: ')
+
+    # Create student object
+    s = Student(name=name, email=email, address=address, phone=phone)
+
+    # Open a session with the DB
+    sesh = Session(engine)
+
+    # Add our model instance to the session
+    sesh.add(s)
+
+    # Commit the changes and store in DB
+    sesh.commit()
 
 
 def main_menu(logged_in: bool):
@@ -124,6 +138,7 @@ def main_menu(logged_in: bool):
 
 
 def main():
+    create_db_and_tables()
     main_menu(False)
 
     '''
