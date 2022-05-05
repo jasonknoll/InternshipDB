@@ -49,6 +49,12 @@ CREATE TABLE Duties (
 
 /* DML Examples */
 
+/* 
+
+
+
+*/
+
 /* Create */
 INSERT INTO Student 
 VALUES ("Jason Knoll", "jmknoll@school.edu", "1000 Road Ave", "1-800-Stanley Steamer");
@@ -56,8 +62,12 @@ VALUES ("Jason Knoll", "jmknoll@school.edu", "1000 Road Ave", "1-800-Stanley Ste
 INSERT INTO Officer
 VALUES (1, "President", "Jason Knoll");
 
+INSERT INTO Company
+Values ("Arthrex", "999 Arthrex Street", "arthrex@arthrex.com");
 
 INSERT INTO Internship
 VALUES (1, "Arthrex", "Junior Software Engineer", "08/01/2022-12/01/2022", "$90000", "accepted");
 
-INSERT INTO 
+INSERT INTO Duties
+VALUES (1, "Junior Software Engineer", "*some description of how it went*", "*list of projects worked on that are allowed to be shared publicly*");
+
