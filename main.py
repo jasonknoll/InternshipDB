@@ -105,7 +105,7 @@ def create_db_and_tables():
 
 
 def add_database_entry_menu():
-    pass
+    print('Internship DB ============')
 
 
 def query_menu():

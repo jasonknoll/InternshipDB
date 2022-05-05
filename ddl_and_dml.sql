@@ -87,16 +87,37 @@ VALUES (1, "Junior Software Engineer", "*some description of how it went*", "*li
 
 /* Read */
 
-SELECT 
+SELECT (ID, Name, email, address, phone)
+FROM Student
+WHERE ID=1;
 
+SELECT (Student_ID, Title, Name) 
+FROM Officer
+WHERE Title="Junior Software Engineer";
 
+SELECT (Company_name, address, email) 
+FROM Company
+WHERE email="arthrex@arthrex.com";
 
+SELECT (Internship_ID, Student_ID, Company_name, Title, Dates, Wages, Status) 
+FROM Internship
+WHERE Student_ID=1 and Wages="$90000"
+
+SELECT (Internship_ID, Title, Experience, Projects) 
+FROM Duties
+WHERE Internship_ID=1;
 
 
 
 /* Update */
 
-UPDATE
+UPDATE Student
+SET Name="Jason M Knoll"
+WHERE ID=1;
+
+UPDATE Officer
+SET Name="Jordan Tatum"
+WHERE ID=2;
 
 
 
