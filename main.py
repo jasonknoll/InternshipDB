@@ -171,6 +171,11 @@ def student_registration_menu():
     db_menu()
 
 
+def reg_menu():
+    '''Registration menu'''
+    pass
+
+
 def main_menu(logged_in: bool):
     '''main menu to handle first set of inputs'''
     if logged_in == False:
