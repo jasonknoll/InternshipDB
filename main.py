@@ -48,7 +48,10 @@ class Student(SQLModel, table=True):
     address: Optional[str]
     phone: Optional[str]
 
+    # TODO create other models for tables
+    # TODO create a view
 
+# C in CRUD
 def insert_into(table: SQLModel, tuple: Tuple):
     pass
 
@@ -59,7 +62,7 @@ def create_db_and_tables():
 # Interfacing
 # ------------------------------------------
 
-
+# TODO finish the interface
 def add_database_entry_menu():
     pass
 
@@ -133,6 +136,9 @@ def main_menu(logged_in: bool):
         print("1. Student registration")
         print("2. Student login (not actually)")
         print("3. Company registration")
+        # TODO add officer login
+        # TODO create company registration
+        # TODO create company login and add internship
 
         user = input('> ')
         if user == "1":
