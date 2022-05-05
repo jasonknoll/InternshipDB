@@ -21,7 +21,8 @@ To run the program in your console, use:
 ---
 
 ## Documentation
-this is a test
+ER-Diagram:
+![ER-Diagram](InternshipDB/Database Documents/ER-Diagram.png)
 
 
 
