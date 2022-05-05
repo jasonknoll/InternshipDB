@@ -49,24 +49,6 @@ CREATE TABLE Duties (
 
 /* DML Examples */
 
-/* 
-
-CHANCE! Hello there sir. I need your help finishing the SQL Statements! 
-We have to write INSERT, SELECT, UPDATE, DELETE statements for EVERY table. 
-Below I have templates for you so you can help me out! The interface is killing me. 
-Remember that sometimes the ID (for that specific table) is inlcuded in the statement and sometimes its not. S
-ome items can also be null and come can't. 
-I've already done the insert statements for us.
-
-SELECT (ID, Name, email, address, phone)
-FROM Student
-
-(Student_ID, Title, Name) FROM Officer
-(Company_name, address, email) FROM Company
-(Internship_ID, Student_ID, Company_name, Title, Dates, Wages, Status) from Internship
-(Internship_ID, Title, Experience, Projects) from Duties
-
-*/
 
 /* Create */
 INSERT INTO Student 
@@ -117,10 +99,34 @@ WHERE ID=1;
 
 UPDATE Officer
 SET Name="Jordan Tatum"
-WHERE ID=2;
+WHERE ID=2 AND Name="Jordan";
 
+UPDATE Internship 
+SET address="1600 Pensylvania Ave", company_name="White House"
+where Internship_ID=1;
+
+UPDATE Company
+SET company_name="White House"
+WHERE address="1600 Pensylvania Ave";
+
+Update Duties
+SET Experience="Amazing!..."
+WHERE projects="AI Research,..."
 
 
 /* Delete */
 
-DELETE 
+DELETE FROM Student
+WHERE ID=0;
+
+DELETE FROM Officer
+WHERE ID=0 OR Name="";
+
+DELETE FROM Company
+WHERE company_name="Google";
+
+DELETE FROM Internship
+WHERE Internship_ID=0 OR Status="declined"
+
+DELETE FROM Duties
+WHERE projects="" AND experience="" AND title=""
