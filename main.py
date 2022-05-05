@@ -174,7 +174,9 @@ def student_registration_menu():
 def reg_menu():
     '''Registration menu'''
     print("Registration ============")
-
+    print("1. Student")
+    print("2. Officer (must have student login)")
+    print("3. Company")
 
 
 def main_menu(logged_in: bool):
@@ -182,20 +184,26 @@ def main_menu(logged_in: bool):
 
     available_inputs = ["1", "2"]
 
-    if logged_in == False:
-        print("FGCU Student Internship DB =================")
-        print("1. Register")
-        print("2. Login")
-        # TODO add officer login
-        # TODO create company login and add internship
+    user = None
 
-        user = input('> ')
-        if user == "1":
-            student_registration_menu()
-        elif user == "2":
-            login_menu()
-    else:
-        query_menu()
+    while user not in available_inputs:
+        if logged_in == False:
+            print("FGCU Student Internship DB =================")
+            print("1. Register")
+            print("2. Login")
+            # TODO add officer login
+            # TODO create company login and add internship
+
+            user = input('> ')
+            
+            if user == "1":
+                student_registration_menu()
+            elif user == "2":
+                login_menu()
+            else:
+                logging.warning("Invalid selection!")
+        else:
+            query_menu()
 
 
 def main():
