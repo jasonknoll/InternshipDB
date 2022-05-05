@@ -70,7 +70,7 @@ class Company(SQLModel, table=True):
 
 class Internship(SQLModel, table=True):
     '''Internship table'''
-    
+
     internship_id: int = Field(default=None, primary_key=True)
     student_id: int = Field(default=None, foreign_key="student.student_id")
     company_name: str = Field(default=None, foreign_key="company.company_name")
@@ -82,8 +82,9 @@ class Internship(SQLModel, table=True):
 
 class Duties(SQLModel, table=True):
     '''Duties table'''
-    
-    internship_id: int = Field(default=None, primary_key=True, foreign_key="internship.internship_id")
+
+    internship_id: int = Field(
+        default=None, primary_key=True, foreign_key="internship.internship_id")
     title: Optional[str]
     experience: Optional[str]
     projects: Optional[str]
@@ -128,7 +129,7 @@ def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
 
     print('Login =============')
-    
+
     # TODO check to see if they exist already in the db to simulate a login
 
 

@@ -9,11 +9,11 @@ CREATE TABLE student (
 );
 
 CREATE TABLE Officer (
-        ID int NOT NULL,
+        Student_ID int NOT NULL,
         Club_Title varchar(255),
         Name varchar(255) NOT NULL,
-        PRIMARY KEY (ID),
-        FOREIGN KEY (ID) REFERENCES Student(ID),
+        PRIMARY KEY (Student_ID),
+        FOREIGN KEY (Student_ID) REFERENCES Student(ID),
         FOREIGN KEY (Name), REFERENCES Student(Name)
 );
 
@@ -26,14 +26,14 @@ CREATE TABLE Company (
 
 CREATE TABLE Internship (
         Internship_ID int NOT NULL,
-        ID int,
+        Student_ID int,
         Company_Name varchar(255) NOT NULL,
         Title varchar(255),
         Dates varchar(255),
         Wages varchar(255),
         Status varchar(255),
         PRIMARY KEY (Internship_ID),
-        FOREIGN KEY (ID) REFERENCES Student(ID),
+        FOREIGN KEY (Student_ID) REFERENCES Student(ID),
         FOREIGN KEY (Company_Name) REFERENCES Company(Company_Name)
 );
 
@@ -48,5 +48,16 @@ CREATE TABLE Duties (
 
 
 /* DML Examples */
-INSERT INTO Student ("name", "email")
-VALUES ("Jason Knoll", "jmknoll@school.edu")
+
+/* Create */
+INSERT INTO Student 
+VALUES ("Jason Knoll", "jmknoll@school.edu", "1000 Road Ave", "1-800-Stanley Steamer");
+
+INSERT INTO Officer
+VALUES (1, "President", "Jason Knoll");
+
+
+INSERT INTO Internship
+VALUES (1, "Arthrex", "Junior Software Engineer", "08/01/2022-12/01/2022", "$90000", "accepted");
+
+INSERT INTO 
