@@ -20,4 +20,7 @@ To run the program in your console, use:
 ## How to Use
 ---
 
+## Documentation
+---
+
 
