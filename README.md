@@ -21,7 +21,6 @@ To run the program in your console, use:
 ---
 
 ## Documentation
----
 this is a test
 
 
