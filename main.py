@@ -128,12 +128,23 @@ def db_menu():
 def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
 
-    print('Login =============')
+    print("Login ================")
+    print("1. Student")
+    print("2. Officer (must have student login)")
+    print("3. Company")
 
     # TODO check to see if they exist already in the db to simulate a login
 
 
-def student_registration_menu():
+def company_register_menu():
+    logging.warning('NOT IMPLEMENTED YET')
+
+
+def officer_register_menu():
+    logging.warning('NOT IMPLEMENTED YET')
+
+
+def student_register_menu():
     '''Student enters their information and is added to the DB'''
 
     print('Student Registration ============')
@@ -185,9 +196,9 @@ def reg_menu():
 
     while user_in not in inputs:
         if user_in == "1":
-            student_registration_menu()
+            student_register_menu()
         elif user_in == "2":
-            pass
+            officer_register_menu()
         elif user_in == "3":
             pass
 
@@ -195,7 +206,7 @@ def reg_menu():
 def main_menu(logged_in: bool):
     '''main menu to handle first set of inputs'''
 
-    available_inputs = ["1", "2"] # different way to handle invalid input
+    available_inputs = ["1", "2"]  # different way to handle invalid input
 
     user = None
 
@@ -208,9 +219,9 @@ def main_menu(logged_in: bool):
             # TODO create company login and add internship
 
             user = input('> ')
-            
+
             if user == "1":
-                student_registration_menu()
+                student_register_menu()
             elif user == "2":
                 login_menu()
             else:
