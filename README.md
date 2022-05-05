@@ -16,10 +16,11 @@ To install all the required Python packages:
 
 To run the program in your console, use:
 `python main.py`
-
+---
 ## How to Use
 ---
 
+---
 ## Documentation
 ---
 ER-Diagram:
