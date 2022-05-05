@@ -21,7 +21,6 @@ To run the program in your console, use:
 ---
 
 ## Documentation
-
 ER-Diagram:
 ![ER-Diagram](Database_Documents/ER-Diagram.png)
 
