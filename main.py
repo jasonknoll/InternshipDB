@@ -63,19 +63,30 @@ class Officer(SQLModel, table=True):
 class Company(SQLModel, table=True):
     '''Company table'''
 
-    company_name: str
+    company_name: str = Field(default=None, primary_key=True)
     address: Optional[str]
     email: Optional[str]
 
 
 class Internship(SQLModel, table=True):
     '''Internship table'''
-    pass
+    
+    internship_id: int = Field(default=None, primary_key=True)
+    student_id: int = Field(default=None, foreign_key="student.student_id")
+    company_name: str = Field(default=None, foreign_key="company.company_name")
+    job_title: str
+    dates: str
+    wages: str
+    status: str
 
 
 class Duties(SQLModel, table=True):
     '''Duties table'''
-    pass
+    
+    internship_id: int = Field(default=None, primary_key=True, foreign_key="internship.internship_id")
+    title: Optional[str]
+    experience: Optional[str]
+    projects: Optional[str]
 
 
 # C in CRUD
@@ -117,7 +128,7 @@ def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
 
     print('Login =============')
-    id = int(input('Enter your ID number: '))
+    
     # TODO check to see if they exist already in the db to simulate a login
 
 
@@ -163,11 +174,9 @@ def main_menu(logged_in: bool):
     '''main menu to handle first set of inputs'''
     if logged_in == False:
         print("FGCU Student Internship DB =================")
-        print("1. Student registration")
-        print("2. Student login (not actually)")
-        print("3. Company registration")
+        print("1. Register")
+        print("2. Login")
         # TODO add officer login
-        # TODO create company registration
         # TODO create company login and add internship
 
         user = input('> ')
