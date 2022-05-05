@@ -179,6 +179,18 @@ def reg_menu():
     print("2. Officer (must have student login)")
     print("3. Company")
 
+    inputs = ["1", "2"]
+
+    user_in = None
+
+    while user_in not in inputs:
+        if user_in == "1":
+            student_registration_menu()
+        elif user_in == "2":
+            pass
+        elif user_in == "3":
+            pass
+
 
 def main_menu(logged_in: bool):
     '''main menu to handle first set of inputs'''
