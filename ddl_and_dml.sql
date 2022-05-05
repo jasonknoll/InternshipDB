@@ -2,7 +2,7 @@
 CREATE TABLE student (
         ID int NOT NULL,
         Name varchar(255) NOT NULL,
-        Email varchar(255),
+        Email varchar(255) NOT NULL,
         Address varchar(255),
         Phone varchar(255),
         PRIMARY KEY (ID),
@@ -13,7 +13,8 @@ CREATE TABLE Officer (
         Club_Title varchar(255),
         Name varchar(255) NOT NULL,
         PRIMARY KEY (ID),
-        FOREIGN KEY (ID) REFERENCES Student(ID)
+        FOREIGN KEY (ID) REFERENCES Student(ID),
+        FOREIGN KEY (Name), REFERENCES Student(Name)
 );
 
 CREATE TABLE Company (

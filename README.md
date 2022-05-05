@@ -14,7 +14,7 @@ _Python 3.9.12 was used for this project_
 To install all the required Python packages: 
 `pip install -r reqs.txt`
 
-To run in your console, use:
+To run the program in your console, use:
 `python main.py`
 
 ## How to Use

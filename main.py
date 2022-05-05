@@ -48,8 +48,35 @@ class Student(SQLModel, table=True):
     address: Optional[str]
     phone: Optional[str]
 
-    # TODO create other models for tables
     # TODO create a view
+
+
+class Officer(SQLModel, table=True):
+    '''Officer table'''
+
+    officer_id: Optional[int] = Field(
+        default=None, primary_key=True, foreign_key="student.student_id")
+    club_title: Optional[str]
+    name: str = Field(default=None, foreign_key="student.name")
+
+
+class Company(SQLModel, table=True):
+    '''Company table'''
+
+    company_name: str
+    address: Optional[str]
+    email: Optional[str]
+
+
+class Internship(SQLModel, table=True):
+    '''Internship table'''
+    pass
+
+
+class Duties(SQLModel, table=True):
+    '''Duties table'''
+    pass
+
 
 # C in CRUD
 def insert_into(table: SQLModel, tuple: Tuple):
@@ -63,6 +90,8 @@ def create_db_and_tables():
 # ------------------------------------------
 
 # TODO finish the interface
+
+
 def add_database_entry_menu():
     pass
 
@@ -89,7 +118,7 @@ def login_menu():
 
     print('Login =============')
     id = int(input('Enter your ID number: '))
-    # TODO check to see if they exist
+    # TODO check to see if they exist already in the db to simulate a login
 
 
 def student_registration_menu():
@@ -131,6 +160,7 @@ def student_registration_menu():
 
 
 def main_menu(logged_in: bool):
+    '''main menu to handle first set of inputs'''
     if logged_in == False:
         print("FGCU Student Internship DB =================")
         print("1. Student registration")
@@ -150,6 +180,7 @@ def main_menu(logged_in: bool):
 
 
 def main():
+    '''Main function that get's called on startup'''
     create_db_and_tables()
     main_menu(False)
 
