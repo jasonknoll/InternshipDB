@@ -22,7 +22,7 @@ To run the program in your console, use:
 
 ## Documentation
 ER-Diagram:
-![ER-Diagram](InternshipDB/DatabaseDocuments/ER-Diagram.png)
+![ER-Diagram](Database Documents/application architecture diagram.png)
 
 
 
