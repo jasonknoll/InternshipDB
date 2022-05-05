@@ -173,11 +173,15 @@ def student_registration_menu():
 
 def reg_menu():
     '''Registration menu'''
-    pass
+    print("Registration ============")
+
 
 
 def main_menu(logged_in: bool):
     '''main menu to handle first set of inputs'''
+
+    available_inputs = ["1", "2"]
+
     if logged_in == False:
         print("FGCU Student Internship DB =================")
         print("1. Register")
