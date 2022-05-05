@@ -16,19 +16,18 @@ To install all the required Python packages:
 
 To run the program in your console, use:
 `python main.py`
----
+
 ## How to Use
 ---
 
----
 ## Documentation
----
+
 ER-Diagram:
 ![ER-Diagram](Database_Documents/ER-Diagram.png)
 
 Application Architecture Diagram: 
 ![Application Architecture Diagram](Database_Documents/application_architecture_diagram.png)
----
+
 
 
 
