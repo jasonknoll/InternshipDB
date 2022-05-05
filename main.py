@@ -140,6 +140,7 @@ def student_registration_menu():
 
     name = ""
 
+    # Handle invalid inputs so the program doesn't crash
     while(name == ""):
         name = input('Enter your name: ')
         if name == "":
@@ -182,7 +183,7 @@ def reg_menu():
 def main_menu(logged_in: bool):
     '''main menu to handle first set of inputs'''
 
-    available_inputs = ["1", "2"]
+    available_inputs = ["1", "2"] # different way to handle invalid input
 
     user = None
 
