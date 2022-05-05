@@ -51,7 +51,10 @@ CREATE TABLE Duties (
 
 /* 
 
+CHANCE! Hello there sir. I need your help finishing the SQL Statements! We have to write INSERT, SELECT, UPDATE, DELETE statements for EVERY table. Below I have templates for you so you can help me out! The interface is killing me
 
+SELECT (ID, Name, 
+FROM Student
 
 */
 
