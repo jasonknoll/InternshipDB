@@ -51,10 +51,15 @@ CREATE TABLE Duties (
 
 /* 
 
-CHANCE! Hello there sir. I need your help finishing the SQL Statements! We have to write INSERT, SELECT, UPDATE, DELETE statements for EVERY table. Below I have templates for you so you can help me out! The interface is killing me
+CHANCE! Hello there sir. I need your help finishing the SQL Statements! We have to write INSERT, SELECT, UPDATE, DELETE statements for EVERY table. Below I have templates for you so you can help me out! The interface is killing me. Remember that sometimes the ID (for that specific table) is inlcuded in the statement and sometimes its not. Some items can also be null and come can't. I've already done the insert statements for us.
 
-SELECT (ID, Name, 
+SELECT (ID, Name, email, address, phone)
 FROM Student
+
+(Student_ID, Title, Name) FROM Officer
+(Company_name, address, email) FROM Company
+(Internship_ID, Student_ID, Company_name, Title, Dates, Wages, Status) from Internship
+(Internship_ID, Title, Experience, Projects) from Duties
 
 */
 
@@ -74,3 +79,22 @@ VALUES (1, "Arthrex", "Junior Software Engineer", "08/01/2022-12/01/2022", "$900
 INSERT INTO Duties
 VALUES (1, "Junior Software Engineer", "*some description of how it went*", "*list of projects worked on that are allowed to be shared publicly*");
 
+
+/* Read */
+
+SELECT 
+
+
+
+
+
+
+/* Update */
+
+UPDATE
+
+
+
+/* Delete */
+
+DELETE 
