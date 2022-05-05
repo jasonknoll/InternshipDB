@@ -51,7 +51,12 @@ CREATE TABLE Duties (
 
 /* 
 
-CHANCE! Hello there sir. I need your help finishing the SQL Statements! We have to write INSERT, SELECT, UPDATE, DELETE statements for EVERY table. Below I have templates for you so you can help me out! The interface is killing me. Remember that sometimes the ID (for that specific table) is inlcuded in the statement and sometimes its not. Some items can also be null and come can't. I've already done the insert statements for us.
+CHANCE! Hello there sir. I need your help finishing the SQL Statements! 
+We have to write INSERT, SELECT, UPDATE, DELETE statements for EVERY table. 
+Below I have templates for you so you can help me out! The interface is killing me. 
+Remember that sometimes the ID (for that specific table) is inlcuded in the statement and sometimes its not. S
+ome items can also be null and come can't. 
+I've already done the insert statements for us.
 
 SELECT (ID, Name, email, address, phone)
 FROM Student
