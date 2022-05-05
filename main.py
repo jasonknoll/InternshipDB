@@ -125,6 +125,10 @@ def db_menu():
         add_database_entry_menu()
 
 
+def student_login():
+    pass
+
+
 def login_menu():
     '''Student enters their ID. The DB is queried to see if their ID is already registered'''
 
@@ -227,7 +231,7 @@ def main_menu(logged_in: bool):
             else:
                 logging.warning("Invalid selection!")
         else:
-            query_menu()
+            db_menu()
 
 
 def main():
