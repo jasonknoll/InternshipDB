@@ -21,12 +21,13 @@ To run the program in your console, use:
 ---
 
 ## Documentation
+---
 ER-Diagram:
 ![ER-Diagram](Database_Documents/ER-Diagram.png)
 
 Application Architecture Diagram: 
 ![Application Architecture Diagram](Database_Documents/application_architecture_diagram.png)
-
+---
 
 
 
