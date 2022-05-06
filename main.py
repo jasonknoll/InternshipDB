@@ -1,6 +1,6 @@
 '''
  **PLEASE READ THE README FILE TO SEE INSTRUCTIONS**
-
+ **NOT FUNCTIONAL**
 
  main.py - FGCU Data Engineering Internship DB Project
  Main file that houses the interface for our DB project.
