@@ -37,8 +37,11 @@ DB Tables:
 
 Text User Interface: 
 ![Text User Interface](Database_Documents/sc.png)
+![Example 1](Database_Documents/chance_0.jpg)
+![Example 2](Database_Documents/chance_1.jpg)
+![Example 3](Database_Documents/chance_2.jpg)
 
-Example Output demonstration registration:
+Example Output demonstration:
 ![Example DB](Database_Documents/db_sc.PNG)
 
 
