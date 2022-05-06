@@ -32,8 +32,14 @@ ER-Diagram:
 Application Architecture Diagram: 
 ![Application Architecture Diagram](Database_Documents/application_architecture_diagram.png)
 
+DB Tables:
+![DB](Database_Documents/db.PNG)
+
 Text User Interface: 
 ![Text User Interface](Database_Documents/sc.png)
+
+Example Output demonstration registration:
+![Example DB](Database_Documents/db_sc.PNG)
 
 
 

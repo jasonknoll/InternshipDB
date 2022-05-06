@@ -78,7 +78,7 @@ class Duties(SQLModel, table=True):
     projects: Optional[str]
 
 
-# C in CRUD
+# TODO Do CRUD
 def insert_into(table: SQLModel, tuple: Tuple):
     pass
 
