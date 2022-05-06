@@ -1,15 +1,17 @@
 # InternshipDB
 Database application for Professor Allen's Intro to Data Engineering final group project
 
+*WARNING* This application is not complete due to time constraints. Most of the code is non-functional and is work-in-progress. Only student registration works
+
 ## Explanation
 ---
-This application is composed of two different systems: the text interface and the API which connects to the database and acts as a 'server' even though they're both running locally on your machine. 
 
-This program uses **FastAPI** to handle the API requests and return JSON objects. These JSON objects translate direction into Python dictionaries and can be manipulated easily. **SQLModel** acts as a higher-level-abstraction for **SQLAcademy** and is used to manipulate the database in this project.
+Although we may use the regular SQLite3 package to implement our SQL, I chose to use **SQLModel** as it acts as a high-level abstraction for SQL inside of Python. Each SQL statement has a companion python function in the package. Our DDL and DML is still provided in the `.sql` file.
 
 ## Installation
 ---
 _Python 3.9.12 was used for this project_
+_**Highly recommend using a virtual environment**_
 
 To install all the required Python packages: 
 `pip install -r reqs.txt`
@@ -19,13 +21,19 @@ To run the program in your console, use:
 
 ## How to Use
 ---
+_You don't_
+Only thing working right now is student registration.
 
 ## Documentation
+---
 ER-Diagram:
 ![ER-Diagram](Database_Documents/ER-Diagram.png)
 
 Application Architecture Diagram: 
 ![Application Architecture Diagram](Database_Documents/application_architecture_diagram.png)
+
+Text User Interface: 
+![Text User Interface](Database_Documents/sc.png)
 
 
 

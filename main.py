@@ -1,25 +1,13 @@
 '''
  **PLEASE READ THE README FILE TO SEE INSTRUCTIONS**
-
+ **NOT FUNCTIONAL**
 
  main.py - FGCU Data Engineering Internship DB Project
  Main file that houses the interface for our DB project.
  *WE ONLY HAVE A TEXT INTERFACE*
 
- Jason Knoll, Jordan Tatum, Chance Mullen
+ Jason Knoll, Jordan Tatum
 
- Requirements:
- - A student can register to enter or search internships
- - A student must provide name and email address when registering
- - A student can provide an address and phone number when registering
- - A student does not have to have an internship as they may just register to search for internships
- - A new internship can be created without a student
- - An internship has 1 company
- - A company can have 1 or more internships 
- - There may be multiple instances of an internship by student and dates (start – end)
- - An instance of an internship must have 1 student
- - An internship must have at least one category, and can have multiple categories
- - A new internship instance should start with a copy of the internship categories 
 '''
 
 from typing import Optional, Any, Dict, Tuple
@@ -232,6 +220,8 @@ def main_menu(logged_in: bool):
                 logging.warning("Invalid selection!")
         else:
             db_menu()
+
+
 
 
 def main():
